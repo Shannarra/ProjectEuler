@@ -1,6 +1,6 @@
 def assert_and_print(actual, expected)
   assert!(actual, expected)
-  puts "✔️ Answer: #{actual} ✔️"
+  puts "✔️  Answer: #{actual} ✔️"
 end
 
 def assert!(actual, expected, msg = "Assertion failed. \nActual: #{actual}\nExpected:#{expected}")
