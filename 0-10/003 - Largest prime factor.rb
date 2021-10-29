@@ -5,4 +5,4 @@ require_relative '../util'
 require 'prime'
 TESTNUM = 600_851_475_143  
 
-assert_and_print Prime.prime_division(TESTNUM).last[0], 6857
+assert_and_print TESTNUM.prime_division.last[0], 6857
