@@ -21,3 +21,4 @@ end
 assert_and_print G(10), 754
 assert_and_print G(10**2), 583766
 assert_and_print G(10**2)**9, 7873161731583857647376027588146585525314329750836736
+assert_and_print G(10**2)**9 % 1_000_000_007, 51455571

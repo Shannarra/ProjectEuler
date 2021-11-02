@@ -6,5 +6,5 @@ This is just an exersice repo aiming to solve all [Project Euler](https://projec
 Because it's fun.
 
 ### Prerequisites
-[x] Having Ruby installed (duh) with minimal version of 2.6.5. (Older versions might also work).
-[x] Having the motivations to solve the questions 
+[x] Having Ruby installed (duh) with minimal version of 2.6.5. (Older versions might also work).  
+[x] Having the motivations to solve the questions   
