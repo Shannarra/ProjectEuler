@@ -20,7 +20,7 @@ arr = [
   [04, 62, 98, 27, 23,  9, 70, 98, 73, 93, 38, 53, 60, 04, 23],
 ]
 
-def max_of_3(arr, row, x)
+def max_adjacent_next_index(arr, row, x)
   new_x = (arr[row][x] < arr[row][x+1]) ? x + 1 : x
 
   if (x > 0)
@@ -33,10 +33,9 @@ end
 x = 0; sum = arr[0][0] + ((arr[1][0] < arr[1][1]) ? arr[1][1] : arr[1][0])
 
 (1...(arr.count - 1)).each do |row|
-  x = max_of_3(arr, row+1, x)
+  x = max_adjacent_next_index(arr, row+1, x)
   sum += arr[row+1][x]
 end
+sum += arr[-1][max_adjacent_next_index(arr, -1, x)]
 
-sum += max_of_3(arr, -1, x)
-
-assert_and_print sum + (arr[-1][x]), 1212
+assert_and_print sum + (arr[-1][x]), 1308
