@@ -10,9 +10,7 @@ require_relative '../util'
 
 # https://projecteuler.net/problem=67
 
-file = File.open("./60-70/question_assets/067-triangle.txt")
-
-lines = file.readlines.map(&:chomp)
+lines = read_asset!('60-70', "067-triangle")
 
 arr = [[]]
 lines.each {|line| arr << line.split(" ").map(&:to_i)}
