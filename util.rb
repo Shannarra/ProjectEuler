@@ -7,6 +7,13 @@ def assert!(actual, expected, msg = "Assertion failed. \nActual: #{actual}\nExpe
   raise msg unless actual == expected
 end
 
+def read_asset!(foldr, name)
+  File
+    .open("./#{foldr}/question_assets/#{name}.txt")
+    .readlines
+    .map(&:chomp)
+end
+
 # https://stackoverflow.com/a/45896909/11542917
 def factorial!(n) 
   (1..n).inject(1) {|r,i| r*i } 
