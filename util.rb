@@ -3,7 +3,7 @@ def assert_and_print(actual, expected)
   puts "✔️  Answer: #{actual} ✔️"
 end
 
-def assert!(actual, expected, msg = "Assertion failed. \nActual: #{actual}\nExpected:#{expected}")
+def assert!(actual, expected, msg = "Assertion failed. \nActual:  #{actual}\nExpected:#{expected}")
   raise msg unless actual == expected
 end
 
@@ -72,4 +72,10 @@ class Array
   def last
     self[self.count - 1]
   end
+end
+
+require 'benchmark'
+# Executes the given block and measures the performance in time
+def time(name = 'Your fn', &block)
+  puts "#{name} took #{Benchmark.measure { yield block}}"
 end
